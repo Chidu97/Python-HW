@@ -25,11 +25,6 @@ print(sample_list1)
 # 4 -
 color_list =  ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
 
-# input_string = input("Enter a new color:")
-# color_list = input_string.split(",")
-# print("Printing new colors")
-# for color in color_list:
-#  print(color)
 
 # created an input that takes in any amount of colors
 input_string = input("Enter Color:")
