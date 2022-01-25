@@ -1,6 +1,6 @@
 
 # 1 - 
-my_list = ["The","quick","brown","fox", "jumps", "over", "the", "lazy", "dog"]
+my_list = ["The","quick","brown","fox", "jumps", "over", "the", "lazy", "dog."]
 
 # returned (my_list) as a new string list seperated by space
 my_list1 = " ".join(my_list)
