@@ -51,16 +51,6 @@ elif choice == 's':
 
 # withdrawal function
 
-# data = {
-#     "account":"23527472",
-#     "name":"Chidu",
-#     "dob":"97-10-06",
-#     "bvn":"123456789",
-#     "pin":"1234",
-#     "bal": 5000
-#     }
-
-
 user_bal = data.get("bal")
 wit_amount = int(input("Enter the amount you wish to withdraw: \n>"))
 
