@@ -6,14 +6,31 @@ data = {
         "dob":"97-10-06",
         "bvn":"123456789",
         "pin":"1234",
-        "bal": 0
+        "bal": 0,
+        
+        "transfer":[{"amount" : " ",
+        "type" : "credit",
+        "action" : "deposit"},
+        
+        {"amount" : " ",
+        "type" : "debit",
+        "action" : "withdraw"}]
     },
+    
     "2352747203":{
         "name":"Ife",
         "dob":"87-11-06",
         "bvn":"123456789",
         "pin":"1234",
-        "bal": 5000
+        "bal": 5000,
+        
+        "transfer":[{"amount" : " ",
+        "type" : "credit",
+        "action" : "deposit"},
+        
+        {"amount" : " ",
+        "type" : "debit",
+        "action" : "withdraw"}]
     }
 }
 
