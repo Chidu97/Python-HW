@@ -1,3 +1,4 @@
+from datetime import datetime
 import random
 
 
@@ -39,6 +40,7 @@ while True:
                     Press 1 to withdraw
                     Press 2 to deposit
                     Press 3 to transfer
+                    press 4 to get a statement
                     Press any other key to quit.""")
                 
                 user_input = input(">")
@@ -57,7 +59,7 @@ while True:
                             "action" : "withdrawal"
                         }
                         
-                        trans_data[acc_num].append(detail)
+                        # trans_data[acc_num].append(detail)
                         
                         
                         print("Please take your cash")
@@ -67,12 +69,14 @@ while True:
                     amount = int(input("How much?\n>"))
                     
                     user['bal']+=amount
+                    trans_date = datetime.today()
                     
                     #log transaction data
                     detail = {
                         "amount":amount,
                         "type": "credit",
-                        "action" : "deposit"
+                        "action" : "deposit",
+                        "transaction_date":trans_date
                     }
                     
                     # trans_data[acc_num].append(detail)      
@@ -95,10 +99,22 @@ while True:
                         detail = {
                             "amount":amount,
                             "type": "debit",
-                            "action" : "transfer"
+                            "action" : "transfer",
+                            "transaction_date": trans_date
                         }
+                elif user_input == '4':
+                    start_date_input = input('Enter start date:\n>')
+                    stop_date_input = input('Enter stop date:\n>')
+                    if start_date_input < stop_date_input:
+                        acct_statement = {}
+                        acct_statement_1 = detail["transaction_date"]
                         
-                        trans_data[acc_num].append(detail)
+                        detail = {
+                        "amount":amount,
+                        "type": "debit",
+                        "action" : "transfer"
+                        }
+                        # trans_data[acc_num].append(detail)
                         
                         detail_recepient = {
                             "amount":amount,
@@ -150,4 +166,19 @@ while True:
 
 
 print(data)
+# print(detail)
 # print(trans_data)
+
+def validate_pin(pin):
+    isValid = True
+    if not any(char.isdigit() for char in pin):
+        print('Your pin must be numeric')
+        isValid=False
+    if isValid:
+        return "You are good to go"
+    else:
+        return "Your pin must be numeric"
+
+print(validate_pin(user['pin']))
+
+    
