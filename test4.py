@@ -171,14 +171,18 @@ print(data)
 
 def validate_pin(pin):
     isValid = True
+    if len(pin) > 4:
+        print('Pin should be 4 charaters')
+        isValid=False
     if not any(char.isdigit() for char in pin):
         print('Your pin must be numeric')
         isValid=False
     if isValid:
         return "You are good to go"
     else:
-        return "Your pin must be numeric"
+        return "Invalid Pin"
 
-print(validate_pin(user['pin']))
+print(validate_pin('6855'))
+
 
     
